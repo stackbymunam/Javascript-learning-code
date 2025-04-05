@@ -1,22 +1,14 @@
+let arr = [1, 2, 4, 55, 7];
+// console.log(arr)
 
-function bla (name) {
-    console.log("hey " + name + "harry whats your name")
-console.log("hey " + name+ "harry whats your age")
-console.log("hey " + name+ " harry your course is good")
-console.log("hey " + name+ " harry thats all")
+// conaole.log(arr.length)
+// console.log(arr[2])
 
-}
-bla("Munam")
-bla("you you")
-function sum(a , b, c = 16) {
-    // console.log(a * b)
-    return a + b + c
-}
- result = sum(5, 29)
+console.log(arr.toString())
+console.log(arr.join(" and "))
 
-console.log("the sum of numbers are:",result)
+let a1 = [1, 2, 3];
+let a2 = [4, 5, 6,];
+let a3 = [7, 8, 9,]
 
-let func1 = (x)=>{
-    console.log("iam a an arrow bla bla bla", x)
-}
-func1(34);
+console.log(a1.concat(a2, a3))
