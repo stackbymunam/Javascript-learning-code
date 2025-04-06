@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <div class="child">
+                iam a child
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelector(".child").addEventListener("click", ()=>{
+            alert("child was click")
+         
+        })
+        document.querySelector(".childcontainer").addEventListener("click", ()=>{
+            alert("clild container was clicked");
+        })
+        document.querySelector(".container").addEventListener("click", ()=>{
+            alert(" container was clicked");
+        })
+            
+
+        
+    </script>
+</body>
+</html>
