@@ -1,12 +1,30 @@
-let button = document.getElementById("btn")
-button.addEventListener("dblclick", ()=>{
-    document.querySelector(".box").innerHTML = " <b> yayy i was clicked i knoew it </B>"
-})
 
-button.addEventListener("contextmenu", ()=>{
-    alert("dont right click please it broser will turn into dark wed")
-    document.querySelector(".box").style.backgroundColor = "blue"
-})
-document.addEventListener("keydown", (e)=>{
-    console.log(e)
-})
+function creatcard(title, cname, views, monthsold, duration, thumbnail){
+    let viewnumber
+    if(views<1000000){
+        let viewnumber = views/1000 + "k";
+    }
+    else if(views>10000000){
+        let viewnumber = views/10000000 + "M"
+    }
+    else{
+        let viewnumber = views/1000 + "k"
+    }
+    let html = `  <div class="card">
+        <div class="iamge">
+        <img src="" alt="${thumbnail}">
+            <div class="capsule">${duration}</div>
+        </div>
+        <div class="text">
+            <h1>${title} </h1>
+            <p>${cname} . ${viewnumber} views . ${months} months ago</p>
+        </div>
+       </div>`
+       document.querySelector(".container").innerHTML = document.querySelector(".container").innerHTML + html   
+       
+}
+
+
+
+
+
