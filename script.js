@@ -1,23 +1,40 @@
-console.log("munam is a hackder");
-console.log("he is a hecker")
-
-setTimeout(() => {
-    console.log("iam inside timeout bla bla bla")
-}, 2000);
-
-console.log("the end : thats it")
-
-
-
-const callback = (arg)=>{
-    console.log(arg)
+    async function getdata(){
+    return new Promise((reslolve, reject)=>{
+        setTimeout(() => {
+            reslolve(455)
+        }, 3000);
+    })
 }
-const loadscritp = (src, callback)=>{
-    let sc = document.createElement("script")
-    sc.src = src
-    sc.onload =  callback("harry");
-    document.head.append(sc)
-}
+ async function main(){
 
-loadscritp("",)
+ 
+console.log("loading modules");
+
+console.log("do something else");
+
+
+console.log("load data");
+
+
+
+let data = await getdata()
+
+console.log(data)
+
+    console.log("process data")
+
+    console.log("task 2")
+}
+main()
+
+// data.then((v)=>{
+//     console.log(data)
+
+//     console.log("process data")
+
+//     console.log("task 2")
+// })
+
+
+
 
