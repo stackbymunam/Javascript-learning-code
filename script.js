@@ -1,40 +1,27 @@
-    async function getdata(){
-    return new Promise((reslolve, reject)=>{
-        setTimeout(() => {
-            reslolve(455)
-        }, 3000);
-    })
+let a = prompt("enter the first number");
+
+let b = prompt("enter the second number");
+
+if(isNaN(a)  || isNaN(b)){
+    throw SyntaxError("sorry bro its not allowed");
 }
- async function main(){
 
- 
-console.log("loading modules");
+let sum = parseInt(a) + parseInt(b)
+ let x = 1;
 
-console.log("do something else");
+function main(){
 
-
-console.log("load data");
-
-
-
-let data = await getdata()
-
-console.log(data)
-
-    console.log("process data")
-
-    console.log("task 2")
+    try {
+        console.log("the sum is ", sum*x)
+    } catch (error) {
+        console,log("error is coming")
+    }
+    
+    finally{
+        console.log("file are being closed now go to your home");
+    }
 }
-main()
 
-// data.then((v)=>{
-//     console.log(data)
+let c = main
 
-//     console.log("process data")
-
-//     console.log("task 2")
-// })
-
-
-
-
+console.log("code is running")
