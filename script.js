@@ -1,28 +1,31 @@
-class Animal{
-    constructor(name){
-        this.name = name
-        console.log("object is created...")
-    }
+//  this is iffi
 
-    eats(){
-        console.log("mai kha raha hoon");
-    }
+async function sleep(){
+    return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            resolve(45)
+        }, 1000);
+    })
+}
+( async function main(){
+    let a = await sleep()
+    console.log(a)
+    let b = await sleep()
+    console.log(b)
 
-    jump(){
-        console.log("mai kood raha hon")
-    }
+// this is destructing
+    let [x, y, ...rest] = [1,6, 8, 3, 5,6, 7, 8,9]
+    console.log(x,y, rest)
+  
+
+// destructuring Object
+let obj ={
+    a:1,
+    b:4,
+    c:7
 }
 
-class lion extends Animal {
-    constructor(name){
-        super(name)
-        this.name = name
-        console.log("object is created... and he is a lion")
-    }
-}
-let a = new Animal("Bunny");
-console.log(a)
+let {a,b} = obj
+console.log(a,b)
 
-let l = new lion("shera")
-console.log(l)
-
+})()
