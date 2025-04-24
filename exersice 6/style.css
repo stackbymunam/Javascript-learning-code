@@ -1,0 +1,131 @@
+.container{
+    height: 300px;
+    width: 260px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(247, 247, 244);
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.heading{
+    text-align: center;
+}
+.task-add{
+    text-align: center;
+}
+
+.task-1{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 2px solid rgb(241 236 236);
+    height: 30px;
+    width: 217px;
+    margin-left: 20px;
+    margin-top: 10px;
+  
+}
+
+.task-1 p{
+    margin-bottom: -7px;
+    margin-top: 6px;
+    letter-spacing: 2px;
+    padding-left: 2px;
+}
+
+#Delete{
+    height: 20px;
+    width: 49px;
+  
+    margin-right: 5px;
+    margin-top: 5px;
+   
+
+}
+#view{
+  
+    height: 20px;
+    width: 40px;
+    margin-top: 5px;
+    
+}
+.task-2{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 2px solid rgb(241 236 236);
+    height: 30px;
+    width: 217px;
+    margin-left: 20px;
+    margin-top: 10px;
+  
+}
+
+.task-2 p{
+    margin-bottom: -7px;
+   
+    letter-spacing: 2px;
+    padding-left: 2px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+#Delete{
+    height: 20px;
+    width: 49px;
+  
+    margin-right: 5px;
+    margin-top: 5px;
+   
+
+}
+#view{
+  
+    height: 20px;
+    width: 40px;
+    margin-top: 5px;
+    
+}
+.task-3{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 2px solid rgb(241 236 236);
+    height: 30px;
+    width: 217px;
+    margin-left: 20px;
+    margin-top: 10px;
+  
+}
+
+.task-3 p{
+    margin-bottom: -7px;
+    margin-top: 6px;
+    letter-spacing: 2px;
+    padding-left: 2px;
+    font-size: 10px;
+
+}
+
+#Delete{
+    height: 20px;
+    width: 49px;
+  
+    margin-right: 5px;
+    margin-top: 5px;
+   
+
+}
+#view{
+  
+    height: 20px;
+    width: 40px;
+    margin-top: 5px;
+    
+}
+
+
+
+
+
