@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 100px;
+  }
+  
+  #clock {
+    font-size: 48px;
+    margin: 20px 0;
+  }
+  
+  input, button {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
