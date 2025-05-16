@@ -1,31 +1,99 @@
-//  this is iffi
+const scroll = new LocomotiveScroll({
+  el: document.querySelector("#main"),
+  smooth: true
+});
 
-async function sleep(){
-    return new Promise((resolve, reject)=>{
-        setTimeout(() => {
-            resolve(45)
-        }, 1000);
+var timeout;
+
+function firstpageAnim() {
+  let tl = gsap.timeline();
+
+  tl.from(".nav",
+    {
+      y: "-10",
+      opacity: 0,
+      duration: 2,
+      ease: Expo.easeInout
     })
-}
-( async function main(){
-    let a = await sleep()
-    console.log(a)
-    let b = await sleep()
-    console.log(b)
+  tl.to(".boundingelem", {
+    y: 0,
+    ease: Expo.easeInout,
+    duration: 1.5,
+    stagger: .2
+  })
+  tl.from(".herofooter", {
+    y: "-10",
+    opacity: 0,
+    duration: 2,
+    delay: -1,
+    ease: Expo.easeInout,
 
-// this is destructing
-    let [x, y, ...rest] = [1,6, 8, 3, 5,6, 7, 8,9]
-    console.log(x,y, rest)
+  })
+}
+
+function circlechaptkarlo() {
+  let xscale = 1;
+  let yscale = 1;
+
+  let xprev = 0;
+  let yprev = 0;
+  window.addEventListener("mousemove", function (dets) {
+
+    clearTimeout(timeout);
+
+        xscale =gsap.utils.clamp(.8,1.2,  dets.clientX - xprev);
+        yscale = gsap.utils.clamp(.8,1.2, dets.clientY - yprev);
+       
+    xprev = dets.clientX;
+    xprev = dets.clientX;
+
+    circleMouseFollower(xscale, yscale);
+
+  timeout =  setTimeout(function(){
+       document.querySelector(
+      ".minicircel"
+    ).style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)  scale(1, 1) `;
+    })
+  })
+}
+circlechaptkarlo();
+
+function circleMouseFollower(xscale, yscale) {
+  window.addEventListener("mousemove", function (dets) {
+    document.querySelector(
+      ".minicircel"
+    ).style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)  scale(${xscale}, ${yscale}) `;
+
+    
+  });
+
+}
+firstpageAnim()
+circleMouseFollower();
+
+
+
+document.querySelectorAll(".elem")
+.forEach(function (elem){
+let roatate = 0;
+let diffrot = 0;
+
+
+
+
+  elem.addEventListener("mousemove", function (details) {
+    let diff = (details.clientY - elem.getBoundingClientRect().top)
+    diffrot = details.clientX - roatate;
+    roatate = details.clientX
+
   
-
-// destructuring Object
-let obj ={
-    a:1,
-    b:4,
-    c:7
-}
-
-let {a,b} = obj
-console.log(a,b)
-
-})()
+   gsap.to(elem.querySelector("img"), {
+    opacity: 1,
+    ease: Power3,
+    top: diff,
+    left: details.clientX,
+    roatate: gsap.utils.clamp(-20, 20, diffrot),
+   
+   }) 
+  })
+})

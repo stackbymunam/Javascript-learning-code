@@ -1,0 +1,9 @@
+smooth scrooling
+attach loco scroll css
+attach loco scrrol min js
+some step from loco motive js from github.
+
+gsap 
+Attach gsap
+
+scrol trigger
