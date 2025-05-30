@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>initiliazing hacking ...</div>
+    <script>
+        
+        const additem = async()=>{
+            await randomDelay();
+            let div = document.createElement("div");
+            div.innerHTML = item;
+            document.body.append(div)
+
+        }
+        const randomDelay = ()=>{
+            return new Promise((resolve, reject)=>{
+                timeout = 1 + 6* Math.random();
+            setTimeout(() => {
+                resolve()
+            }, timeout * 1000);
+            })
+          
+        }
+
+
+        let text = ["initiliazing hacking ...",
+            "Reading your files...",
+            "Password files Detected...",
+            "sending all passwords and persnol files to server",
+            "cleaning up"
+
+        ]
+
+        for (const item of text) {
+            additem(item)
+        }
+
+    </script>
+
+</body>
+
+</html>
