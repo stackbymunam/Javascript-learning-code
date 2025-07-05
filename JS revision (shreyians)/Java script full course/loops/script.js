@@ -45,7 +45,7 @@ for(let i = 1 ; i<11; i++){
 
 // question 2
 
- let i = 10;
+//  let i = 10;
  while(i > 0){
     console.log(i)
     i--
@@ -54,5 +54,30 @@ for(let i = 1 ; i<11; i++){
 
 //question 3
 
+for(let i = 1; i<21; i++){
+    if(i %  2 === 0){
+        console.log(i);
+    };
+};
 
+// question 4
+
+
+let i = 1;
+while(i<16){
+
+    if(i % 2 === 1){
+        console.log(i)
+    }
+    i++
+}
+
+//question 5
+
+for(let i = 1; i<11; i++){
+    console.log(`5 x ${i} = ${5 * i}`)
+
+}
+
+//question 6
 
