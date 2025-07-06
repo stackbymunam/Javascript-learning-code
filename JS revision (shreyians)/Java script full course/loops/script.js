@@ -45,39 +45,107 @@ for(let i = 1 ; i<11; i++){
 
 // question 2
 
-//  let i = 10;
+ let i = 10;
  while(i > 0){
     console.log(i)
     i--
  }
 
 
-//question 3
+// question 3
 
-for(let i = 1; i<21; i++){
-    if(i %  2 === 0){
-        console.log(i);
+    for(let i = 1; i<21; i++ ){
+        if(i % 2 === 0){
+            console.log(i)
+        };
     };
-};
+
 
 // question 4
 
 
 let i = 1;
-while(i<16){
-
+while (i<16) {
     if(i % 2 === 1){
         console.log(i)
-    }
-    i++
-}
+    };
+};
 
-//question 5
+// question 5
 
 for(let i = 1; i<11; i++){
-    console.log(`5 x ${i} = ${5 * i}`)
+    console.log(` 5 x ${i} = ${5 * i}`);
+}
+
+// question 6
+
+let sum = 0;
+for(let i = 1; i<101; i++){
+    sum = sum + i
+}
+console.log(sum)
+
+// question 7
+
+for(let i = 1; i<51; i++){
+   if(i%3 === 0){
+    console.log(i)
+   }
+}
+
+
+// question 8
+let val = prompt("gave the number")
+ 
+ for(let i = 1; i<=val; i++){
+    if(i % 2 === 0){
+        console.log(`${i} this is an even`)
+    }
+    else{
+        console.log(`${i} this is an odd`)
+    }
+ }
+
+// // question 9 ✅ DONE BY MY OWN
+
+for(let i = 1; i<101; i++){
+    if(i % 5 === 0 && i % 3 === 0){
+        console.log(i)
+    }
+}
+
+// question related to break and continue
+
+// question 1
+
+for(let i = 1; i<101; i++){
+        console.log(i)
+    if(i % 7 === 0){
+        break
+    }
+}
+
+
+// question 2 ✅ done by me own
+
+for(let i = 1; i<21; i++){
+    if(i % 3 === 0){
+        continue 
+    }
+    console.log(i)
+}
+
+///question 3
+
+let count = 0
+for(let i = 1 ; i < 101; i++){
+    if( i % 2 === 1){
+        count++
+        console.log(i)
+    }
+
+    if (count === 5) break
 
 }
 
-//question 6
 
