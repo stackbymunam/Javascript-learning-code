@@ -108,6 +108,54 @@ function abcd(){
       let c = 56;
     }
   }
+
+
+  //questions
+function getscore(...scores){
+    let total = 0;    
+    scores.forEach(function(val){
+        total = total + val
+
+        
+    })
+
+    return total;
+}
+
+ console.log(getscore(10, 25, 50 , 40 ));
+
+
+// question 2
+function checkage(age){
+    if(age< 18) return "too young"
+    return "Allowed"
+}
+
+console.log(checkage(16))
+
+// question 3
+let a = function(){
+    console.log("hehehehe")
+}
+
+a();
+
+
+// question 4
+
+function abcd(val){
+    val()
+}
+abcd(function(){
+    console.log("hey heye hey")
+})
+
+// question iffe
+(function init(){
+    console.log("heheheheh")
+})();
+
+
 }
 
 
