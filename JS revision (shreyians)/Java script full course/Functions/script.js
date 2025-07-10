@@ -133,7 +133,7 @@ function checkage(age){
 
 console.log(checkage(16))
 
-// question 3
+/ question 3
 let a = function(){
     console.log("hehehehe")
 }
@@ -155,7 +155,36 @@ abcd(function(){
     console.log("heheheheh")
 })();
 
+practice session
+BMI Calculator
 
+function bmi(wight, hight){
+     return wight / (hight*hight)
 }
+
+ console.log(bmi(69, 1.6).toFixed(2));
+
+
+// reusable discount calcultor
+
+function discountcalculator(discount){
+    return function(price){
+        return price - price * (discount / 100)
+    }
+}
+
+let ten =  discountcalculator(10)
+let twenty =  discountcalculator(20)
+
+ console.log(ten(2400));
+
+
+(function(){
+    const password = "secret password"
+   
+})();
+
+
+
 
 
