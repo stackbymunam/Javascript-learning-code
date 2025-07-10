@@ -149,3 +149,62 @@ for(let i = 1 ; i < 101; i++){
 }
 
 
+
+//mine pracitce question
+//  question 1
+for(let i = 1; i<11; i++){
+    console.log(i)
+}
+
+// question 2
+for(let i = 1; i< 51 ; i++){
+    if(i % 2 === 0){
+        console.log(i)
+    }
+}
+
+// question 3
+sum = 0;
+for(let i = 1; i<101; i++){
+    sum = sum + i
+}
+console.log(sum)
+
+// question 4
+for(let i = 1; i < 11; i++){
+    console.log(`7 x ${i} = ${i * 7}`)
+}
+
+// question 5
+ let number = 5;
+ let factorial = 1; 
+ for(let i = 1; i<=5;i++){
+    number = number * i
+ }
+ console.log(number)
+
+// question 6
+    for(let i = 1 ; i<101; i++){
+        if(i % 3 === 0 && i % 5 === 0){
+            console.log(i)
+        }
+    }
+
+
+    // while loop question
+
+
+
+
+
+// question 1
+let i = 1;
+while(i <= 100){
+    console.log(i);
+    i++
+}
+
+
+
+
+
