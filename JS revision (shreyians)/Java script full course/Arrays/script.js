@@ -162,4 +162,17 @@ console.log(b)
 
 //question 16
 
+let a = [1,2];
+let b = [3,4];
+let newc = [...a, ...b];
+console.log(newc)
 
+// question 17
+let country = ["USA", "UK"];
+let addcountry = ["india", ...country];
+console.log(addcountry);
+
+//question 18
+let arr = [1,2,3];
+let newarr = [...arr]
+console.log(newarr)
