@@ -79,6 +79,7 @@ let flarr = [1,2,4,5,6,7,8,9,10 ];
 },0)
 console.log(newflarr)
 
+
 // question 4 Write a function to find the intersection of two arrays. (pending)
 let arr1 = [1, 2, 3, 4, 5];
 let arr2 = [3, 4, 5, 6, 7];
@@ -87,6 +88,20 @@ function intersection(arr1,arr2) {
 };
  
 // question 5  Implement a custom map function for arrays.
-let member = [];
+let numbers = [5, 10, 15, 20];
+function coustommap(numbers, callback){
+    let result = [];
+    for(let i  = 0; i < numbers.length; i++){
+        let transformed = callback(numbers[i], i, numbers)
+        result.push(transformed);
+    }
+    return result
+}
+
+let result  = coustommap(numbers, function(val){
+    return val * 2;
+});
+
+console.log(result);
 
 
