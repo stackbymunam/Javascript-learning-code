@@ -89,3 +89,13 @@ ul.removeChild(li)
  p.forEach(function(val){
     val.style.fontSize = "16px"
  })
+
+
+
+
+
+
+
+
+
+
