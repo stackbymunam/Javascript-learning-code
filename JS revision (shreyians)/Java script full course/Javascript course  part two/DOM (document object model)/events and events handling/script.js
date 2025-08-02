@@ -89,5 +89,30 @@ abcd.addEventListener("mouseout", function(){
 
 window.addEventListener("mousemove", function(dets){
     abcd.style.top = dets.clientY + "px";
+
+
+   
+let ul = document.querySelector("ul");
+
+ul.addEventListener("click", function(dets){
+   dets.target.classList.toggle("lt")
+})
+
+let inp = document.querySelector("input");
+let num = document.querySelector("span");
+
+inp.addEventListener("input", function(dets){
+    console.log(dets)
+    let left = 20 - inp.value.length
+    num.textContent = left
+    if(left<0){
+        num.style.color = "red"
+    }
+    else{
+        num.style.color = "white"
+    }
+});
+
     abcd.style.left = dets.clientX + "px"
 });
+
