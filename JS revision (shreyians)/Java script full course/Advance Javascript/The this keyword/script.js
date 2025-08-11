@@ -56,6 +56,11 @@ const userManger = {
       desc.textContent = user.bio;
       card.appendChild(desc);
 
+    // to remove the card when click it
+         card.addEventListener("click", () => {
+      this.users.splice(index, 1);
+      this.renderuser();
+    })
       // Finally, append the card wherever needed, for example:
 
       document.querySelector(".users").appendChild(card);
@@ -63,5 +68,6 @@ const userManger = {
     },
     removeuser: function () {},
 }
+
 
 userManger.init();
