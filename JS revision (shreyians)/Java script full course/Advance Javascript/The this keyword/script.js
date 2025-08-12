@@ -60,10 +60,13 @@ const userManger = {
          card.addEventListener("click", () => {
       this.users.splice(index, 1);
       this.renderuser();
-    })
-      // Finally, append the card wherever needed, for example:
+
+
+             // Finally, append the card wherever needed, for example:
 
       document.querySelector(".users").appendChild(card);
+    })
+      
     });
     },
     removeuser: function () {},
@@ -71,3 +74,4 @@ const userManger = {
 
 
 userManger.init();
+
