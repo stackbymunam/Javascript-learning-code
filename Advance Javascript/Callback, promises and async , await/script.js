@@ -1,6 +1,6 @@
    function getUser(callback) {
             setTimeout(() => {
-                console.log("✅ Got user");
+                console.log("HEllo world bhai kia hal chal hai");
                 if (callback) callback(null, { id: 1, name: "John" });
             }, 1000);
         }
@@ -90,3 +90,4 @@
                 console.error(err);
             }
         }, 8000);
+
