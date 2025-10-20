@@ -53,8 +53,87 @@ let Bank = (function() {
     }
 
 
-//  let hp = creatproduct("laptop", 70000);
-//  let apple= creatproduct("iphone", 200000)
+// observer pattern
+class Youtubechannel{
+    constructor(){
+        this.subscribers = []
+    }
+
+    subscribe(user){
+        this.subscribers.push(user);
+        user.update(` ${user.name}, you have subscribed the channel`);
+    }
+    unsubscribe(user){
+       this.subscribers = this.subscribers.filter((sub) => sub !== user);
+        user.update(`you have unsubscribed the channel`);
+    }  
+    notify(message){
+        this.subscribers.forEach(sub => sub.update(message));
+    }
+    
+}
+
+     class user {
+        constructor(name) {
+            this.name = name
+        }
+
+        update(data){
+            console.log(`${this.name}, ${data}`)
+        }
+
+     }
+
+     let shyreinas = new Youtubechannel();
+     let user1 = new user("Munam");
+     let user2 = new user("brooo");
+
+
+     shyreinas.subscribe(user1);
+     shyreinas.subscribe(user2)
+     shyreinas.notify("we are trying to do a comeback");
+
+ let apple= creatproduct("iphone", 200000)
+
+
+class Youtubechannel{
+    constructor(){
+        this.subscribers = []
+    }
+
+    subscribe(user){
+        this.subscribers.push(user);
+        user.update(` ${user.name}, you have subscribed the channel`);
+    }
+    unsubscribe(user){
+       this.subscribers = this.subscribers.filter((sub) => sub !== user);
+        user.update(`you have unsubscribed the channel`);
+    }  
+    notify(message){
+        this.subscribers.forEach(sub => sub.update(message));
+    }
+    
+}
+
+     class user {
+        constructor(name) {
+            this.name = name
+        }
+
+        update(data){
+            console.log(`${this.name}, ${data}`)
+        }
+
+     }
+
+     let shyreinas = new Youtubechannel();
+     let user1 = new user("Munam");
+     let user2 = new user("brooo");
+
+
+     shyreinas.subscribe(user1);
+     shyreinas.subscribe(user2)
+     shyreinas.notify("we are trying to do a comeback")
 
 
 
