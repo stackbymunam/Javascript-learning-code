@@ -149,8 +149,21 @@ function debounce(fnc, delay) {
     }, delay);
   };
 }
-
 input.addEventListener("input", debounce(function(e) {
+  console.log("User typed:", e.target.value);
+}, 1000));
+
+
+function throtling(fnc, delay){
+    let timer = 0;
+    return function(...args){
+        let now = Date.now();
+        if(now - timer >= delay){
+            fnc(...args)
+        }
+    }
+}
+input.addEventListener("input", throtling(function(e) {
   console.log("User typed:", e.target.value);
 }, 1000));
 
